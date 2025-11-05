@@ -1,0 +1,20 @@
+{
+  "name": "projeto-eng-2",
+  "version": "1.0.0",
+  "description": "Projeto de Engenharia 2 - Finance App",
+  "main": "./FinanceApp/index.ts",
+  "scripts": {
+    "start": "cd FinanceApp && npm start",
+    "start:backend": "python main.py",
+    "start:frontend": "cd FinanceApp && npm start",
+    "start:dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "install:all": "npm install && cd FinanceApp && npm install",
+    "setup": "pip install -r requirements.txt && npm run install:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": ["FinanceApp"],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "private": true
+}
